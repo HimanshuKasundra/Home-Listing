@@ -1,0 +1,22 @@
+<div class="card col-md-3">
+    <img [src]="homeListDetails.PropertyImage" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{homeListDetails.PropertyName}}</h5>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                ListingID : {{homeListDetails.ListingID}}
+            </li>
+
+            <li class="list-group-item">
+                RentAmount : {{homeListDetails.RentAmount}}
+            </li>
+            <li class="list-group-item">Address :
+                {{homeListDetails.Address}}</li>
+
+        </ul>
+    </div>
+    <button class="btn btn-outline-primary" routerLink="/HomeList">Back</button>
+    <button class="btn btn-outline-warning"
+        routerLink="/HomeList/edit/{{homeListDetails.ListingID}}">Edit</button>
+    <button class="btn btn-outline-danger" (click)="delete()">Delete</button>
+</div>

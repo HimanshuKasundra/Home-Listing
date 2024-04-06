@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="card col-md-3" *ngFor="let list of listing">
+        <img [src]="list.PropertyImage" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{list.PropertyName}}</h5>
+            <p class="card-text">{{list.RentAmount}}</p>
+        </div>
+        <button class="btn btn-outline-primary"
+            routerLink="/HomeList/{{list.ListingID}}">Details</button>
+        <button class="btn btn-outline-danger"
+            (click)="delete(list.ListingID)">Delete</button>
+    </div>
+</div>
